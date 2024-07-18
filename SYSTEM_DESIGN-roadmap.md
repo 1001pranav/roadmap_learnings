@@ -3,20 +3,21 @@ Certainly! Here's a step-by-step roadmap to help you learn the basic principles 
 
 ### Week 1: Foundations of System Design
 
-#### 1. Understanding System Design []
+#### 1. Understanding System Design
 - **Definition and Importance**: Learn what system design is and why it's crucial for building scalable and efficient systems.
 - **Common Terminology**: Get familiar with terms like scalability, latency, throughput, availability, and reliability.
-
-#### 2. Architectural Patterns []
+[]
+#### 2. Architectural Patterns 
 - **Monolithic Architecture**: Understand the single-tiered software application structure.
 - **Microservices Architecture**: Learn how to decompose applications into loosely coupled services.
 - **Service-Oriented Architecture (SOA)**: Study how services communicate over a network.
 - **Event-Driven Architecture**: Explore the pattern where events trigger actions across services.
+[]
 
-#### 3. Client-Server Model []
+#### 3. Client-Server Model
 - **Basics of Client-Server Architecture**: Understand how clients and servers interact.
 - **APIs and Endpoints**: Learn about API design and how endpoints work.
-
+[]
 ### Week 2: Designing Scalable Systems
 #### 4. Load Balancing []
 - **Concepts of Load Balancing**: Understand the purpose of distributing traffic.
