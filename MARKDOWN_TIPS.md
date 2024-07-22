@@ -94,6 +94,7 @@ Use `>` for blockquotes.
 
 ### Horizontal Lines
 Use `---`, `***`, or `___` for horizontal lines.
+***
 ```markdown
 ---
 ```
