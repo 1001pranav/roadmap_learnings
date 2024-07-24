@@ -14,7 +14,7 @@ project-root/
 │   │   ├── mongodb/                 # MongoDB models and schemas
 │   │   │   ├── schema/              # MongoDB schemas 
 │   │   │   │   ├── userSchema.js    // MongoDB schema for user
-│   │   │   │   ├── productSchema.js // MongoDB schema for product
+│   │   │   │   └── productSchema.js // MongoDB schema for product
 │   │   │   ├── userModel.js         // MongoDB model for user data
 │   │   │   ├── productModel.js      // MongoDB model for product data
 │   │   │   └── index.js             // Exports all MongoDB models for easy import
@@ -22,7 +22,7 @@ project-root/
 │   │   ├── mysql/                   # MySQL models and schemas
 │   │   │   ├── schema/              # MySQL schemas 
 │   │   │   │   ├── userSchema.js    // MySQL schema for user
-│   │   │   │   ├── productSchema.js // MySQL schema for product
+│   │   │   │   └──productSchema.js  // MySQL schema for product
 │   │   │   ├── userModel.js         // MySQL model and schema for user data
 │   │   │   ├── productModel.js      // MySQL model and schema for product data
 │   │   │   └── index.js             // Exports all MySQL models for easy import
