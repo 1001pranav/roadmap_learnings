@@ -73,44 +73,7 @@ MQTT allows for retained messages, which means the last message published to a t
 
 MQTT supports a Last Will and Testament (LWT) feature that allows clients to specify a message that should be sent by the broker if the client unexpectedly disconnects. This is useful for alerting other clients about the status of a client.
 
-### MQTT in Code
-
-Here’s a quick code recap from our previous example to illustrate these concepts in practice.
-
-#### Node.js MQTT Client Example
-
-1. **Publisher**:
-
-```javascript
-const mqtt = require('mqtt');
-const client = mqtt.connect('mqtt://localhost');
-
-client.on('connect', () => {
-  setInterval(() => {
-    client.publish('home/livingroom/temperature', '25°C');
-    console.log('Message Sent');
-  }, 5000);
-});
-```
-
-2. **Subscriber**:
-
-```javascript
-const mqtt = require('mqtt');
-const client = mqtt.connect('mqtt://localhost');
-
-client.on('connect', () => {
-  client.subscribe('home/livingroom/temperature', (err) => {
-    if (!err) {
-      console.log('Subscribed to topic');
-    }
-  });
-});
-
-client.on('message', (topic, message) => {
-  console.log(`Received message: ${message.toString()} on topic: ${topic}`);
-});
-```
+## Installing MQTT broker for local
 
 One popular choice for a local MQTT broker is Mosquitto, which is an open-source MQTT broker. Below are the steps to install and run Mosquitto locally and connect to it using a Node.js client.
 
