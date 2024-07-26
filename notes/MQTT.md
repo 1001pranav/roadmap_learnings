@@ -33,46 +33,6 @@ MQTT is a lightweight messaging protocol designed for low-bandwidth, high-latenc
 
 - Clients that have subscribed to a topic will receive messages whenever a message is published to that topic by any client.
 
-### Example Scenario
-
-Imagine a smart home system with various sensors and devices:
-
-1. **Temperature Sensor**: Publishes temperature data to the topic `home/livingroom/temperature`.
-2. **Smart Thermostat**: Subscribes to the topic `home/livingroom/temperature` to receive temperature updates and adjust the heating/cooling system accordingly.
-3. **Mobile App**: Subscribes to `home/livingroom/temperature` to display the current temperature to the user.
-
-### Detailed Steps
-
-1. **Temperature Sensor (Publisher)**:
-   - Connects to the MQTT broker.
-   - Publishes a message with the temperature data to the topic `home/livingroom/temperature`.
-
-2. **MQTT Broker**:
-   - Receives the message from the temperature sensor.
-   - Checks which clients are subscribed to the topic `home/livingroom/temperature`.
-   - Forwards the message to the smart thermostat and the mobile app.
-
-3. **Smart Thermostat and Mobile App (Subscribers)**:
-   - Receive the temperature data.
-   - The smart thermostat adjusts the heating/cooling system based on the received temperature.
-   - The mobile app displays the updated temperature to the user.
-
-### Quality of Service (QoS) Levels
-
-MQTT provides three levels of Quality of Service (QoS) to ensure reliable message delivery:
-
-1. **QoS 0 (At most once)**: The message is delivered at most once, and delivery is not acknowledged. This is the fastest but least reliable level.
-2. **QoS 1 (At least once)**: The message is delivered at least once, but it may be delivered multiple times if acknowledgments are lost.
-3. **QoS 2 (Exactly once)**: The message is guaranteed to be delivered exactly once. This is the slowest but most reliable level.
-
-### Retained Messages
-
-MQTT allows for retained messages, which means the last message published to a topic is stored by the broker and immediately sent to any client that subscribes to that topic, even if the subscription occurs after the message was originally published.
-
-### Last Will and Testament (LWT)
-
-MQTT supports a Last Will and Testament (LWT) feature that allows clients to specify a message that should be sent by the broker if the client unexpectedly disconnects. This is useful for alerting other clients about the status of a client.
-
 ## Installing MQTT broker for local
 
 One popular choice for a local MQTT broker is Mosquitto, which is an open-source MQTT broker. Below are the steps to install and run Mosquitto locally and connect to it using a Node.js client.
@@ -130,6 +90,47 @@ Now, create a simple Node.js client to connect to your local Mosquitto broker. F
 ```bash
 npm install mqtt
 ```
+
+### Example Scenario
+
+Imagine a smart home system with various sensors and devices:
+
+1. **Temperature Sensor**: Publishes temperature data to the topic `home/livingroom/temperature`.
+2. **Smart Thermostat**: Subscribes to the topic `home/livingroom/temperature` to receive temperature updates and adjust the heating/cooling system accordingly.
+3. **Mobile App**: Subscribes to `home/livingroom/temperature` to display the current temperature to the user.
+
+### Detailed Steps
+
+1. **Temperature Sensor (Publisher)**:
+   - Connects to the MQTT broker.
+   - Publishes a message with the temperature data to the topic `home/livingroom/temperature`.
+
+2. **MQTT Broker**:
+   - Receives the message from the temperature sensor.
+   - Checks which clients are subscribed to the topic `home/livingroom/temperature`.
+   - Forwards the message to the smart thermostat and the mobile app.
+
+3. **Smart Thermostat and Mobile App (Subscribers)**:
+   - Receive the temperature data.
+   - The smart thermostat adjusts the heating/cooling system based on the received temperature.
+   - The mobile app displays the updated temperature to the user.
+
+### Quality of Service (QoS) Levels
+
+MQTT provides three levels of Quality of Service (QoS) to ensure reliable message delivery:
+
+1. **QoS 0 (At most once)**: The message is delivered at most once, and delivery is not acknowledged. This is the fastest but least reliable level.
+2. **QoS 1 (At least once)**: The message is delivered at least once, but it may be delivered multiple times if acknowledgments are lost.
+3. **QoS 2 (Exactly once)**: The message is guaranteed to be delivered exactly once. This is the slowest but most reliable level.
+
+### Retained Messages
+
+MQTT allows for retained messages, which means the last message published to a topic is stored by the broker and immediately sent to any client that subscribes to that topic, even if the subscription occurs after the message was originally published.
+
+### Last Will and Testament (LWT)
+
+MQTT supports a Last Will and Testament (LWT) feature that allows clients to specify a message that should be sent by the broker if the client unexpectedly disconnects. This is useful for alerting other clients about the status of a client.
+
 
 Then, create a script to connect to the local broker, subscribe to a topic, and publish messages:
 
