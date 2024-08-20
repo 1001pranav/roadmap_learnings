@@ -10,6 +10,7 @@ npm install swagger-jsdoc swagger-ui-express --save-dev
 ### Swagger Configuration file
 
 #### Configuration for express.js
+create a file called  - `swagger.js`
 ```javascript
 import swaggerJsdoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
@@ -280,4 +281,21 @@ components:
           example: 28
 ```
 
+
+
+### Authorization
+
+If we want to specify any securiy in API then we need to add following in under `options` in  `swagger.js` file
+```Javascript
+  security: [
+        {
+          bearerAuth: [], // Apply this security to all routes by default
+        },
+  ],
+```
+or if we want security for specific API's then we can add under any specific API's YML like this under path
+```js
+ *     security: 
+ *       - bearerAuth: []
+```
 
