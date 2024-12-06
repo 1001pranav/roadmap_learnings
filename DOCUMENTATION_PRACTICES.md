@@ -91,7 +91,7 @@ To install this project, run:
 ```bash
 npm install my-project
 ```
-```
+
 
 ---
 
@@ -170,7 +170,7 @@ For larger projects, include a table of contents for easy navigation:
 - [Contributing](#contributing)
 ```
 
-### 5. Include Contribution Guidelines
+### 6. Include Contribution Guidelines
 
 Encourage contributions by providing clear guidelines on how others can contribute:
 
@@ -180,7 +180,7 @@ Encourage contributions by providing clear guidelines on how others can contribu
 We welcome pull requests! Please read our contribution guidelines before submitting your pull request.
 ```
 
-### 6. Use Visuals When Appropriate
+### 7. Use Visuals When Appropriate
 
 Incorporate images or GIFs to illustrate features or usage effectively:
 
