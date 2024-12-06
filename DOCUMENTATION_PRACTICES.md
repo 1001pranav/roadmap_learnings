@@ -88,9 +88,8 @@ A brief description of what the project does.
 ## Installation
 To install this project, run:
 
-` ` `bash
+```bash
 npm install my-project
-` ` `
 ```
 
 
