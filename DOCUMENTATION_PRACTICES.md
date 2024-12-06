@@ -140,6 +140,8 @@ To install this project, run the following command:
 npm install my-project
 ```
 
+```
+
 ### 3. Provide Usage Examples
 
 Show users how to use your project with simple examples:
@@ -153,6 +155,7 @@ Here’s a quick example of how to use this project:
 import my_project
 
 my_project.do_something()
+```
 ```
 
 
