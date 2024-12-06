@@ -110,7 +110,6 @@ Here’s how to use the `add_numbers` function:
 result = add_numbers(5, 10)
 print(result)  # Output: 15
 ```
-```
 
 ---
 
@@ -140,7 +139,6 @@ To install this project, run the following command:
 ```bash
 npm install my-project
 ```
-```
 
 ### 3. Provide Usage Examples
 
@@ -156,7 +154,7 @@ import my_project
 
 my_project.do_something()
 ```
-```
+
 
 ### 4. Add a Table of Contents (for Larger Projects)
 
