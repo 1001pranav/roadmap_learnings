@@ -88,8 +88,9 @@ A brief description of what the project does.
 ## Installation
 To install this project, run:
 
-```bash
+` ` `bash
 npm install my-project
+` ` `
 ```
 
 
@@ -106,9 +107,10 @@ Practical examples help users understand how to use your code effectively. Inclu
 
 Here’s how to use the `add_numbers` function:
 
-```python
+`` `python
 result = add_numbers(5, 10)
 print(result)  # Output: 15
+`` `
 ```
 
 ---
@@ -140,8 +142,6 @@ To install this project, run the following command:
 npm install my-project
 ```
 
-```
-
 ### 3. Provide Usage Examples
 
 Show users how to use your project with simple examples:
@@ -151,13 +151,12 @@ Show users how to use your project with simple examples:
 
 Here’s a quick example of how to use this project:
 
-```python
+`` `python
 import my_project
 
 my_project.do_something()
+`` `
 ```
-```
-
 
 ### 4. Add a Table of Contents (for Larger Projects)
 
